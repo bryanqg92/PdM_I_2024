@@ -10882,7 +10882,7 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .debug_rnglists
                 0x000000000000036f       0x19 ./Startup/startup_stm32f429xx.o
 
-.debug_macro    0x0000000000000000    0x24af5
+.debug_macro    0x0000000000000000    0x24b07
  .debug_macro   0x0000000000000000      0x26f ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
  .debug_macro   0x000000000000026f      0xac0 ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
  .debug_macro   0x0000000000000d2f      0x2b8 ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
@@ -10965,7 +10965,7 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .debug_macro   0x00000000000240ee      0x236 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.o
  .debug_macro   0x0000000000024324      0x24e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o
  .debug_macro   0x0000000000024572      0x25a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_macro   0x00000000000247cc      0x329 ./Src/main.o
+ .debug_macro   0x00000000000247cc      0x33b ./Src/main.o
 
 .debug_line     0x0000000000000000     0x6fca
  .debug_line    0x0000000000000000      0x99a ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
@@ -10980,7 +10980,7 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .debug_line    0x0000000000006472      0xae1 ./Src/main.o
  .debug_line    0x0000000000006f53       0x77 ./Startup/startup_stm32f429xx.o
 
-.debug_str      0x0000000000000000    0xe0bee
+.debug_str      0x0000000000000000    0xe0c0d
  .debug_str     0x0000000000000000    0xdbc5e ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
                                       0xdbf2e (size before relaxing)
  .debug_str     0x00000000000dbc5e       0xf5 ./Drivers/CMSIS/system_stm32f4xx.o
@@ -10999,9 +10999,9 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
                                       0xdafd3 (size before relaxing)
  .debug_str     0x00000000000e03cb      0x362 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
                                       0xdb22f (size before relaxing)
- .debug_str     0x00000000000e072d      0x494 ./Src/main.o
-                                      0xdf584 (size before relaxing)
- .debug_str     0x00000000000e0bc1       0x2d ./Startup/startup_stm32f429xx.o
+ .debug_str     0x00000000000e072d      0x4b3 ./Src/main.o
+                                      0xdf5a3 (size before relaxing)
+ .debug_str     0x00000000000e0be0       0x2d ./Startup/startup_stm32f429xx.o
                                          0x67 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x118c

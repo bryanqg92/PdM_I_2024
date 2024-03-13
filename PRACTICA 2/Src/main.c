@@ -51,6 +51,10 @@ static void Error_Handler(void);
  * @param  None
  * @retval None
  */
+#define CONS1 100
+#define CONS2 500
+#define CONS3 1000
+
 
 void delayInit(delay_t *delay, tick_t duration) {
     delay->duration = duration;
@@ -102,9 +106,9 @@ int main(void)
 	// Se iniciliza retardo no bloqueante
 	delay_t delay1,delay2,delay3;
 
-	delayInit(&delay1,100);
-	delayInit(&delay2,500);
-	delayInit(&delay3,1000);
+	delayInit(&delay1,CONS1);
+	delayInit(&delay2,CONS2);
+	delayInit(&delay3,CONS3);
 
 
 	while (1) {

@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_rnglists 00000388  00000000  00000000  000260e8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_macro  00024af5  00000000  00000000  00026470  2**0
+ 18 .debug_macro  00024b07  00000000  00000000  00026470  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   00006fca  00000000  00000000  0004af65  2**0
+ 19 .debug_line   00006fca  00000000  00000000  0004af77  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000e0bee  00000000  00000000  00051f2f  2**0
+ 20 .debug_str    000e0c0d  00000000  00000000  00051f41  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  0000118c  00000000  00000000  00132b20  2**2
+ 21 .debug_frame  0000118c  00000000  00000000  00132b50  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000005b  00000000  00000000  00133cac  2**0
+ 22 .debug_line_str 0000005b  00000000  00000000  00133cdc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -3416,10 +3416,10 @@ __weak uint32_t HAL_RCC_GetSysClockFreq(void)
  800168c:	007a1200 	.word	0x007a1200
 
 08001690 <delayInit>:
- * @brief  Main program
- * @param  None
- * @retval None
- */
+#define CONS1 100
+#define CONS2 500
+#define CONS3 1000
+
 
 void delayInit(delay_t *delay, tick_t duration) {
  8001690:	b480      	push	{r7}
@@ -3538,17 +3538,17 @@ int main(void)
 	// Se iniciliza retardo no bloqueante
 	delay_t delay1,delay2,delay3;
 
-	delayInit(&delay1,100);
+	delayInit(&delay1,CONS1);
  8001726:	f107 031c 	add.w	r3, r7, #28
  800172a:	2164      	movs	r1, #100	; 0x64
  800172c:	4618      	mov	r0, r3
  800172e:	f7ff ffaf 	bl	8001690 <delayInit>
-	delayInit(&delay2,500);
+	delayInit(&delay2,CONS2);
  8001732:	f107 0310 	add.w	r3, r7, #16
  8001736:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
  800173a:	4618      	mov	r0, r3
  800173c:	f7ff ffa8 	bl	8001690 <delayInit>
-	delayInit(&delay3,1000);
+	delayInit(&delay3,CONS3);
  8001740:	1d3b      	adds	r3, r7, #4
  8001742:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
  8001746:	4618      	mov	r0, r3
