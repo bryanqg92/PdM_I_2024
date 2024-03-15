@@ -5,7 +5,7 @@ Hola. Este es el repositorio de prácticas de la asignatura PdM del bimestre 1-2
 ## Práctica 1
 
 Esta práctica fue adaptada para utilizar una plaxa nucleo-746ZGTX por la disponibilidad del momento (físicamente es igual que la 429ZI solo que es corteM7), así que para
-utilizar en una plaza 429ZI, es necesario solo copiar y reemplazar la función ```c int main()``` en main.c
+utilizar en una plaza 429ZI, es necesario solo copiar y reemplazar la función ```int main()``` en main.c
 
 
 ## Práctica 2
