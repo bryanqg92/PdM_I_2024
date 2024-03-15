@@ -51,40 +51,64 @@ static void Error_Handler(void);
  * @param  None
  * @retval None
  */
-#define CONS1 100
-#define CONS2 500
-#define CONS3 1000
+#define DelayBlink1 100
+#define DelayBlink2 500
+#define DelayBlink3 1000
 
 
 void delayInit(delay_t *delay, tick_t duration) {
-    delay->duration = duration;
-    delay->running = false;
+
+	if (duration <= 0)
+	{
+		Error_Handler();
+	}
+	else
+	{
+		delay->duration = duration;
+		delay->running = false;
+	}
 }
 
 bool_t delayRead(delay_t *delay) {
 
-    if (!delay->running) {
-        delay->startTime = HAL_GetTick();
-        delay->running = true;
-        return false; // Se retorna False porque el tiempo no se cumple inicialmente
-    }
-    else {
+	if(delay != NULL)
+	{
 
-    	tick_t currentTime = HAL_GetTick();
+		if (!delay->running) {
+			delay->startTime = HAL_GetTick();
+			delay->running = true;
+			return false; // Se retorna False porque el tiempo no se cumple inicialmente
+		}
+		else {
 
-        if (currentTime - delay->startTime >= delay->duration) {
-            delay->running = false;
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
+			tick_t currentTime = HAL_GetTick();
+
+			if (currentTime - delay->startTime >= delay->duration) {
+				delay->running = false;
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
+	else
+	{
+		Error_Handler();
+	}
 
 }
 
 void delayWrite(delay_t *delay, tick_t duration) {
-    delay->duration = duration;
+
+	if(delay!=NULL && duration <=0)
+	{
+		delay->duration = duration;
+	}
+	else
+	{
+		Error_Handler();
+	}
 }
 
 int main(void)
@@ -100,30 +124,29 @@ int main(void)
 	BSP_LED_Init(LED2);
 	BSP_LED_Init(LED3);
 
-
 	/************* PUNTO 2 ****************/
 
 	// Se iniciliza retardo no bloqueante
-	delay_t delay1,delay2,delay3;
+	delay_t delay_led1,delay_led2,delay_led3;
 
-	delayInit(&delay1,CONS1);
-	delayInit(&delay2,CONS2);
-	delayInit(&delay3,CONS3);
+	delayInit(&delay_led1,DelayBlink1);
+	delayInit(&delay_led2,DelayBlink2);
+	delayInit(&delay_led3,DelayBlink3);
 
 
 	while (1) {
 
-	    if (delayRead(&delay1)) {
-	        BSP_LED_Toggle(LED1);
-	    }
+		if (delayRead(&delay_led1)) {
+			BSP_LED_Toggle(LED1);
+		}
 
-	    if (delayRead(&delay2)) {
-	        BSP_LED_Toggle(LED2);
-	    }
+		if (delayRead(&delay_led2)) {
+			BSP_LED_Toggle(LED2);
+		}
 
-	    if (delayRead(&delay3)) {
-	        BSP_LED_Toggle(LED3);
-	    }
+		if (delayRead(&delay_led3)) {
+			BSP_LED_Toggle(LED3);
+		}
 	}
 
 

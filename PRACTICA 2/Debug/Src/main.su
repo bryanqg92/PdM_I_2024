@@ -1,6 +1,6 @@
 ../Src/main.c:59:6:delayInit	16	static
-../Src/main.c:64:8:delayRead	24	static
-../Src/main.c:86:6:delayWrite	16	static
-../Src/main.c:90:5:main	48	static
-../Src/main.c:182:13:SystemClock_Config	88	static
-../Src/main.c:234:13:Error_Handler	8	static
+../Src/main.c:72:8:delayRead	24	static
+../Src/main.c:102:6:delayWrite	16	static
+../Src/main.c:114:5:main	48	static
+../Src/main.c:205:13:SystemClock_Config	88	static
+../Src/main.c:257:13:Error_Handler	8	static
