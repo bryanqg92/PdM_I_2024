@@ -12,6 +12,27 @@ typedef struct {
 } delay_t;
 
 
+/**
+ * @brief Inicializa una estructura de retardo.
+ * 
+ * @param delay Puntero a la estructura de retardo.
+ * @param duration Duración del retardo en ticks.
+ */
 void delayInit(delay_t *delay, tick_t duration);
+
+/**
+ * @brief Lee el estado actual del retardo.
+ * 
+ * @param delay Puntero a la estructura de retardo.
+ * @return true si el retardo ha finalizado, false en caso contrario.
+ */
 bool_t delayRead(delay_t *delay);
+
+/**
+ * @brief Establece la duración de un retardo existente.
+ * 
+ * @param delay Puntero a la estructura de retardo.
+ * @param duration Nueva duración del retardo en ticks.
+ */
 void delayWrite(delay_t *delay, tick_t duration);
+
