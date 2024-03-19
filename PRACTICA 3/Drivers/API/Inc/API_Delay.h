@@ -1,3 +1,6 @@
+#ifndef API_INC_API_DELAY_H_
+#define API_INC_API_DELAY_H_
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -15,3 +18,6 @@ typedef struct {
 void delayInit(delay_t *delay, tick_t duration);
 bool_t delayRead(delay_t *delay);
 void delayWrite(delay_t *delay, tick_t duration);
+
+
+#endif
