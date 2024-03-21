@@ -1,5 +1,5 @@
-#ifndef API_INC_API_DELAY_H_
-#define API_INC_API_DELAY_H_
+#ifndef API_DELAY_H_
+#define API_DELAY_H_
 
 #include <stdio.h>
 #include <stdint.h>
