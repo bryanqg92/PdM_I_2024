@@ -21,6 +21,7 @@ typedef enum {
 
 static debounceState_t fsmState;
 static bool_t isKeyPressed = false;
+
 delay_t debounceInit;
 
 void debounceFSM_init(uint32_t debounceTime) {
@@ -30,56 +31,49 @@ void debounceFSM_init(uint32_t debounceTime) {
 
 void debounceFSM_update() {
 
-
 	bool_t buttonState = BSP_PB_GetState(BUTTON_USER);
+
 
 	switch(fsmState) {
 
 	case BUTTON_UP:
-
-		if (delayRead(&debounceInit)) {
+		if (buttonState == GPIO_PIN_SET){
 			fsmState = BUTTON_FALLING;
-		}
-		else {
 			isKeyPressed = false;
-			buttonReleased();
 		}
 		break;
 
 	case BUTTON_FALLING:
-
-		if (buttonState == GPIO_PIN_SET) {
+		if (delayRead(&debounceInit)) {
 			fsmState = BUTTON_DOWN;
 			isKeyPressed = true;
 			buttonPressed();
 		}
 		else {
 			fsmState = BUTTON_UP;
-			isKeyPressed = false;
-			buttonReleased();
+
 		}
 		break;
-	case BUTTON_DOWN:
 
-		if (buttonState == GPIO_PIN_SET) {}
-		else if (delayRead(&debounceInit)) {
+	case BUTTON_DOWN:
+		if (buttonState == GPIO_PIN_SET){}
+		else if (buttonState == GPIO_PIN_RESET){
 			fsmState = BUTTON_RAISING;
-			isKeyPressed = false;
-			buttonReleased();
 		}
 		break;
 
 	case BUTTON_RAISING:
 
-		if (buttonState == GPIO_PIN_RESET) {
+		if (delayRead(&debounceInit)) {
 			fsmState = BUTTON_UP;
 			isKeyPressed = false;
 			buttonReleased();
 		}
-		else{
-			isKeyPressed = true;
-			buttonPressed();
+		else {
+			fsmState = BUTTON_DOWN;
+
 		}
+
 		break;
 	}
 }

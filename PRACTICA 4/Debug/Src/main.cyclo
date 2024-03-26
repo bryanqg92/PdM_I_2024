@@ -1,5 +1,5 @@
 ../Src/main.c:73:5:timeIntervalCalc	1
 ../Src/main.c:79:6:blinkLeds	3
 ../Src/main.c:90:5:main	2
-../Src/main.c:151:13:SystemClock_Config	4
-../Src/main.c:203:13:Error_Handler	1
+../Src/main.c:153:13:SystemClock_Config	4
+../Src/main.c:205:13:Error_Handler	1

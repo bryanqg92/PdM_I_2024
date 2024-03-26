@@ -117,6 +117,8 @@ int main(void)
 			calcDelayLed1 = timeIntervalCalc();
 			calcDelayLed2 = timeIntervalCalc();
 
+			printf("%d %d", calcDelayLed1,calcDelayLed2);
+
 			delayWrite(&delay_led1, calcDelayLed1);
 			delayWrite(&delay_led2, calcDelayLed2);
 

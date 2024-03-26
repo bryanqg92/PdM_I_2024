@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_rnglists 0000039b  00000000  00000000  000263a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_macro  00024e20  00000000  00000000  00026743  2**0
+ 18 .debug_macro  00024ece  00000000  00000000  00026743  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   00007a6e  00000000  00000000  0004b563  2**0
+ 19 .debug_line   00007a6e  00000000  00000000  0004b611  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000e0c50  00000000  00000000  00052fd1  2**0
+ 20 .debug_str    000e0c5e  00000000  00000000  0005307f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  000011b0  00000000  00000000  00133c24  2**2
+ 21 .debug_frame  000011b0  00000000  00000000  00133ce0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000005b  00000000  00000000  00134dd4  2**0
+ 22 .debug_line_str 0000005b  00000000  00000000  00134e90  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -354,10 +354,10 @@ Disassembly of section .text:
  80004e6:	bf00      	nop
 
 080004e8 <Error_Handler>:
-#include <stdint.h>
-#include <stdbool.h>
+#include "stm32f4xx_nucleo_144.h"
+#include <API_Delay.h>
 
-#include "API_Delay.h"
+
 
 static void Error_Handler(void){
  80004e8:	b580      	push	{r7, lr}
@@ -365,12 +365,10 @@ static void Error_Handler(void){
 	BSP_LED_On(LED2);
  80004ec:	2001      	movs	r0, #1
  80004ee:	f000 f897 	bl	8000620 <BSP_LED_On>
-	while (1)
+	while (1){}
  80004f2:	e7fe      	b.n	80004f2 <Error_Handler+0xa>
 
 080004f4 <delayInit>:
-	{
-	}
 }
 
 void delayInit(delay_t *delay, tick_t duration) {

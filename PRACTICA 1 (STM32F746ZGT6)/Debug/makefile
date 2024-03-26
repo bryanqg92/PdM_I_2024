@@ -36,34 +36,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := TEMPLATEF746X
+BUILD_ARTIFACT_NAME := PRACTICA_1_STM32F746ZGT6
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-TEMPLATEF746X.elf \
+PRACTICA_1_STM32F746ZGT6.elf \
 
 MAP_FILES += \
-TEMPLATEF746X.map \
+PRACTICA_1_STM32F746ZGT6.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-TEMPLATEF746X.list \
+PRACTICA_1_STM32F746ZGT6.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: TEMPLATEF746X.elf secondary-outputs
+main-build: PRACTICA_1_STM32F746ZGT6.elf secondary-outputs
 
 # Tool invocations
-TEMPLATEF746X.elf TEMPLATEF746X.map: $(OBJS) $(USER_OBJS) /home/lean/Documents/UBA/CESE/I/PDM/CLASE\ I/TEMPLATEF746X/STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TEMPLATEF746X.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/lean/Documents/UBA/CESE/I/PDM/CLASE I/TEMPLATEF746X/STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEMPLATEF746X.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+PRACTICA_1_STM32F746ZGT6.elf PRACTICA_1_STM32F746ZGT6.map: $(OBJS) $(USER_OBJS) /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 1\ (STM32F746ZGT6)/STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "PRACTICA_1_STM32F746ZGT6.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA 1 (STM32F746ZGT6)/STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PRACTICA_1_STM32F746ZGT6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -72,14 +72,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TEMPLATEF746X.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "TEMPLATEF746X.list"
+PRACTICA_1_STM32F746ZGT6.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "PRACTICA_1_STM32F746ZGT6.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) TEMPLATEF746X.elf TEMPLATEF746X.list TEMPLATEF746X.map default.size.stdout
+	-$(RM) PRACTICA_1_STM32F746ZGT6.elf PRACTICA_1_STM32F746ZGT6.list PRACTICA_1_STM32F746ZGT6.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

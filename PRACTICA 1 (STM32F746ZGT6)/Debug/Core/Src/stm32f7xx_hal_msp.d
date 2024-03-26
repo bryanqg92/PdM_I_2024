@@ -25,7 +25,7 @@ Core/Src/stm32f7xx_hal_msp.o: ../Core/Src/stm32f7xx_hal_msp.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h \
- /home/lean/Documents/UBA/CESE/I/PDM/CLASE\ I/TEMPLATEF746X/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h
+ /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 1\ (STM32F746ZGT6)/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h
 ../Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Inc/stm32f7xx_hal_conf.h:
@@ -53,4 +53,4 @@ Core/Src/stm32f7xx_hal_msp.o: ../Core/Src/stm32f7xx_hal_msp.c \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h:
-/home/lean/Documents/UBA/CESE/I/PDM/CLASE\ I/TEMPLATEF746X/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h:
+/home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 1\ (STM32F746ZGT6)/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h:

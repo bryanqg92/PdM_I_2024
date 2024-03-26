@@ -1,4 +1,5 @@
 Drivers/API/Src/API_Delay.o: ../Drivers/API/Src/API_Delay.c \
+ /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.h \
  /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Inc/stm32f4xx_hal_conf.h \
  /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -35,8 +36,8 @@ Drivers/API/Src/API_Delay.o: ../Drivers/API/Src/API_Delay.c \
  /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.h \
  /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/API/Inc/API_Delay.h
+/home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.h:
 /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Inc/stm32f4xx_hal_conf.h:
 /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -73,5 +74,4 @@ Drivers/API/Src/API_Delay.o: ../Drivers/API/Src/API_Delay.c \
 /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-/home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.h:
 /home/lean/Documents/UBA/CESE/I/PDM/repo/PRACTICA\ 3/Drivers/API/Inc/API_Delay.h:
