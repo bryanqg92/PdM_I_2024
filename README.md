@@ -25,6 +25,6 @@ Implementación de máquina de estados finitos de un antirebote por software. En
 
 ### Estados de API_Debpunce
 
-![Estados del API debounce](PRACTICA%204/FSM.png)
+![Estados del API debounce](PRACTICA%204_01/FSM.png)
 
 
