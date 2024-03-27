@@ -23,7 +23,7 @@ Se implementa FEM sin modularizar con el encendido del led 3 cada que ha pasado 
 #### Punto2 2:
 Implementación de máquina de estados finitos de un antirebote por software. En la ruta ```(\Driver\API\)``` se encuentra el header y source del API_Debounce. Los led 1 y 2 van a parpadear de 100 a 500 ms que se calculan aleatoriamente, mientras el led 3 indicará si se ha presionado el boton de la STM.
 
-### Estados de API_Debpunce
+### Estados de API_Debounce
 
 ![Estados del API debounce](PRACTICA%204_01/FSM.png)
 
