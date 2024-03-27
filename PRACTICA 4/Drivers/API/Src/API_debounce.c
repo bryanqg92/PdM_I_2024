@@ -21,8 +21,26 @@ typedef enum {
 
 static debounceState_t fsmState;
 static bool_t isKeyPressed = false;
+bool_t buttonState;
 
 delay_t debounceInit;
+
+
+static void FSM_error_handler(void){
+
+	if (buttonState == GPIO_PIN_RESET){
+		isKeyPressed = false;
+		fsmState = BUTTON_UP;
+	}
+	else{
+
+		while (buttonState == GPIO_PIN_SET)
+		{
+			BSP_LED_On(LED2);
+		}
+	}
+
+}
 
 void debounceFSM_init(uint32_t debounceTime) {
 	fsmState = BUTTON_UP;
@@ -31,7 +49,7 @@ void debounceFSM_init(uint32_t debounceTime) {
 
 void debounceFSM_update() {
 
-	bool_t buttonState = BSP_PB_GetState(BUTTON_USER);
+	buttonState = BSP_PB_GetState(BUTTON_USER);
 
 
 	switch(fsmState) {
@@ -74,6 +92,11 @@ void debounceFSM_update() {
 
 		}
 
+		break;
+
+
+	default:
+		FSM_error_handler();
 		break;
 	}
 }
