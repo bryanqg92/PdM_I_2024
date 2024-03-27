@@ -15,6 +15,12 @@ En main.h Se encuentran las funciones necesarias para el retardo no bloqueante, 
 Se Genera archivo header y soource de la practica 2 para generar como API el uso de los retardos no bloqueantes. ```(\Driver\API\Inc\API_Delay.h y \Driver\API\Src\API_Delay.c )```  
 
 ## Práctica 4
+
+#### Punto 1:
+Se implementa FEM sin modularizar con el encendido del led 3 cada que ha pasado el tiempo de antirrebote.
+
+
+#### Punto2 2:
 Implementación de máquina de estados finitos de un antirebote por software. En la ruta ```(\Driver\API\)``` se encuentra el header y source del API_Debounce. Los led 1 y 2 van a parpadear de 100 a 500 ms que se calculan aleatoriamente, mientras el led 3 indicará si se ha presionado el boton de la STM.
 
 ### Estados de API_Debpunce

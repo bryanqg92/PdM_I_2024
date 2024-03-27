@@ -1,0 +1,8 @@
+../Src/main.c:77:13:FSM_error_handler	3
+../Src/main.c:92:6:debounceFSM_init	1
+../Src/main.c:97:6:debounceFSM_update	10
+../Src/main.c:147:6:buttonPressed	1
+../Src/main.c:151:6:buttonReleased	1
+../Src/main.c:162:5:main	1
+../Src/main.c:209:13:SystemClock_Config	4
+../Src/main.c:261:13:Error_Handler	1
