@@ -4,6 +4,12 @@
  *  Created on: Mar 21, 2024
  *      Author: lean
  */
+
+/**
+ * @file API_debounce.c
+ * @brief Implementación del módulo de debounce.
+ */
+
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -12,20 +18,25 @@
 
 #include "stm32f4xx_nucleo_144.h"
 
+/**
+ * @brief Estados del estado de la máquina de estado del debounce.
+ */
 typedef enum {
-	BUTTON_UP,
-	BUTTON_FALLING,
-	BUTTON_DOWN,
-	BUTTON_RAISING,
+	BUTTON_UP,      
+	BUTTON_FALLING, 
+	BUTTON_DOWN,   
+	BUTTON_RAISING 
 } debounceState_t;
 
-static debounceState_t fsmState;
-static bool_t isKeyPressed = false;
-bool_t buttonState;
+static debounceState_t fsmState; 
+static bool_t isKeyPressed = false; /**< Estado actual del botón (presionado o no). */
+bool_t buttonState; 				/**< Estado actual del botón físico. */
 
-delay_t debounceInit;
+delay_t debounceInit; 
 
-
+/**
+ * @brief Manejador de errores de la máquina de estado.
+ */
 static void FSM_error_handler(void){
 
 	if (buttonState == GPIO_PIN_RESET){
@@ -42,11 +53,18 @@ static void FSM_error_handler(void){
 
 }
 
+/**
+ * @brief Inicializa la máquina de estado del debounce.
+ * @param debounceTime Tiempo de debounce en milisegundos.
+ */
 void debounceFSM_init(uint32_t debounceTime) {
 	fsmState = BUTTON_UP;
 	delayInit(&debounceInit, debounceTime);
 }
 
+/**
+ * @brief Actualiza la máquina de estado del debounce.
+ */
 void debounceFSM_update() {
 
 	buttonState = BSP_PB_GetState(BUTTON_USER);
@@ -101,16 +119,26 @@ void debounceFSM_update() {
 	}
 }
 
+/**
+ * @brief Lee el estado del botón.
+ * @return Estado del botón (presionado o no).
+ */
 bool_t readKey() {
 	bool_t read = isKeyPressed;
 	isKeyPressed = false;
 	return read;
 }
 
+/**
+ * @brief Manejador de evento para el botón presionado.
+ */
 void buttonPressed() {
 	BSP_LED_On(LED3);
 }
 
+/**
+ * @brief Manejador de evento para el botón liberado.
+ */
 void buttonReleased() {
 	BSP_LED_Off(LED3);
 }

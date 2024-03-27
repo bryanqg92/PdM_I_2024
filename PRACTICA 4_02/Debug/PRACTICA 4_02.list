@@ -41,13 +41,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_macro  00026285  00000000  00000000  00027a35  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   000093d4  00000000  00000000  0004dcba  2**0
+ 19 .debug_line   0000947d  00000000  00000000  0004dcba  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000e2f14  00000000  00000000  0005708e  2**0
+ 20 .debug_str    000e2f17  00000000  00000000  00057137  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00002000  00000000  00000000  00139fa4  2**2
+ 21 .debug_frame  00002000  00000000  00000000  0013a050  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000005b  00000000  00000000  0013bfa4  2**0
+ 22 .debug_line_str 0000005e  00000000  00000000  0013c050  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -573,11 +573,11 @@ void delayWrite(delay_t *delay, tick_t duration) {
  800064e:	bd80      	pop	{r7, pc}
 
 08000650 <FSM_error_handler>:
-bool_t buttonState;
+delay_t debounceInit; 
 
-delay_t debounceInit;
-
-
+/**
+ * @brief Manejador de errores de la máquina de estado.
+ */
 static void FSM_error_handler(void){
  8000650:	b580      	push	{r7, lr}
  8000652:	af00      	add	r7, sp, #0
@@ -622,6 +622,10 @@ static void FSM_error_handler(void){
 
 08000690 <debounceFSM_init>:
 
+/**
+ * @brief Inicializa la máquina de estado del debounce.
+ * @param debounceTime Tiempo de debounce en milisegundos.
+ */
 void debounceFSM_init(uint32_t debounceTime) {
  8000690:	b580      	push	{r7, lr}
  8000692:	b082      	sub	sp, #8
@@ -646,6 +650,9 @@ void debounceFSM_init(uint32_t debounceTime) {
 
 080006b8 <debounceFSM_update>:
 
+/**
+ * @brief Actualiza la máquina de estado del debounce.
+ */
 void debounceFSM_update() {
  80006b8:	b580      	push	{r7, lr}
  80006ba:	af00      	add	r7, sp, #0
@@ -799,6 +806,10 @@ void debounceFSM_update() {
 
 08000790 <readKey>:
 
+/**
+ * @brief Lee el estado del botón.
+ * @return Estado del botón (presionado o no).
+ */
 bool_t readKey() {
  8000790:	b480      	push	{r7}
  8000792:	b083      	sub	sp, #12
@@ -823,6 +834,9 @@ bool_t readKey() {
 
 080007b4 <buttonPressed>:
 
+/**
+ * @brief Manejador de evento para el botón presionado.
+ */
 void buttonPressed() {
  80007b4:	b580      	push	{r7, lr}
  80007b6:	af00      	add	r7, sp, #0
@@ -835,6 +849,9 @@ void buttonPressed() {
 
 080007c2 <buttonReleased>:
 
+/**
+ * @brief Manejador de evento para el botón liberado.
+ */
 void buttonReleased() {
  80007c2:	b580      	push	{r7, lr}
  80007c4:	af00      	add	r7, sp, #0
