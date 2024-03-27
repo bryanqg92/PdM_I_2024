@@ -55,13 +55,11 @@ static void Error_Handler(void);
 
 
 
-#define DelayDebounce 20
+#define DelayDebounce 40
 #define BLINKY_DELAY_MIN 100
 #define BLINKY_DELAY_MAX 500
 
 delay_t delay_led1, delay_led2;
-
-
 int calcDelayLed1 = BLINKY_DELAY_MIN, calcDelayLed2 = BLINKY_DELAY_MIN;
 
 
@@ -71,7 +69,6 @@ int calcDelayLed1 = BLINKY_DELAY_MIN, calcDelayLed2 = BLINKY_DELAY_MIN;
  * @return Calculate value
  */
 int timeIntervalCalc(){
-
 	int InternalCal = (rand() % (BLINKY_DELAY_MAX - BLINKY_DELAY_MIN + 1)) + BLINKY_DELAY_MIN;
 	return InternalCal;
 }
@@ -114,15 +111,14 @@ int main(void)
 
 		if(readKey()){
 
-			calcDelayLed1 = timeIntervalCalc();
-			calcDelayLed2 = timeIntervalCalc();
-
-			printf("%d %d", calcDelayLed1,calcDelayLed2);
+			calcDelayLed1 = timeIntervalCalc(); // new led1 delay
+			calcDelayLed2 = timeIntervalCalc(); // new led2 delay
 
 			delayWrite(&delay_led1, calcDelayLed1);
 			delayWrite(&delay_led2, calcDelayLed2);
 
 		}
+
 		blinkLeds();
 	}
 

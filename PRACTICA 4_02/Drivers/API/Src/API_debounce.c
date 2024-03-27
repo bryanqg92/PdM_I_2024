@@ -30,14 +30,16 @@ typedef enum {
 
 static debounceState_t fsmState; 
 static bool_t isKeyPressed = false; /**< Estado actual del botón (presionado o no). */
-bool_t buttonState; 				/**< Estado actual del botón físico. */
 
+bool_t buttonState; 				/**< Estado actual del botón físico. */
 delay_t debounceInit; 
 
 /**
  * @brief Manejador de errores de la máquina de estado.
  */
 static void FSM_error_handler(void){
+
+	buttonState = BSP_PB_GetState(BUTTON_USER);
 
 	if (buttonState == GPIO_PIN_RESET){
 		isKeyPressed = false;
@@ -73,13 +75,15 @@ void debounceFSM_update() {
 	switch(fsmState) {
 
 	case BUTTON_UP:
+
 		if (buttonState == GPIO_PIN_SET){
 			fsmState = BUTTON_FALLING;
-			isKeyPressed = false;
 		}
 		break;
 
+
 	case BUTTON_FALLING:
+
 		if (delayRead(&debounceInit)) {
 			fsmState = BUTTON_DOWN;
 			isKeyPressed = true;
@@ -87,15 +91,12 @@ void debounceFSM_update() {
 		}
 		else {
 			fsmState = BUTTON_UP;
-
 		}
 		break;
 
 	case BUTTON_DOWN:
-		if (buttonState == GPIO_PIN_SET){}
-		else if (buttonState == GPIO_PIN_RESET){
-			fsmState = BUTTON_RAISING;
-		}
+
+		fsmState = (buttonState == GPIO_PIN_RESET) ? BUTTON_RAISING : fsmState;
 		break;
 
 	case BUTTON_RAISING:
@@ -107,7 +108,6 @@ void debounceFSM_update() {
 		}
 		else {
 			fsmState = BUTTON_DOWN;
-
 		}
 
 		break;
