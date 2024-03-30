@@ -23,8 +23,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-#include <API_Delay.h>
-#include <API_Debounce.h>
+#include "API_Delay.h"
+#include "API_Debounce.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -55,7 +55,7 @@ static void Error_Handler(void);
 
 
 
-#define DelayDebounce 40
+#define DelayDebounce 10
 #define BLINKY_DELAY_MIN 100
 #define BLINKY_DELAY_MAX 500
 

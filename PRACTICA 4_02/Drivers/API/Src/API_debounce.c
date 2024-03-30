@@ -77,6 +77,7 @@ void debounceFSM_update() {
 	case BUTTON_UP:
 
 		if (buttonState == GPIO_PIN_SET){
+			delayRead(&debounceInit);
 			fsmState = BUTTON_FALLING;
 		}
 		break;
@@ -85,30 +86,40 @@ void debounceFSM_update() {
 	case BUTTON_FALLING:
 
 		if (delayRead(&debounceInit)) {
-			fsmState = BUTTON_DOWN;
-			isKeyPressed = true;
-			buttonPressed();
+			if (buttonState == GPIO_PIN_SET){
+				fsmState = BUTTON_DOWN;
+				isKeyPressed = true;
+				buttonPressed();
+			}
+			else {
+				fsmState = BUTTON_UP;
+			}
 		}
-		else {
-			fsmState = BUTTON_UP;
-		}
+
 		break;
 
 	case BUTTON_DOWN:
 
-		fsmState = (buttonState == GPIO_PIN_RESET) ? BUTTON_RAISING : fsmState;
+		if (buttonState == GPIO_PIN_RESET){
+			delayRead(&debounceInit);
+			fsmState = BUTTON_RAISING;
+		}
 		break;
 
 	case BUTTON_RAISING:
 
 		if (delayRead(&debounceInit)) {
-			fsmState = BUTTON_UP;
-			isKeyPressed = false;
-			buttonReleased();
+
+			if (buttonState == GPIO_PIN_RESET){
+				fsmState = BUTTON_UP;
+				isKeyPressed = false;
+				buttonReleased();
+			}
+			else {
+				fsmState = BUTTON_DOWN;
+			}
 		}
-		else {
-			fsmState = BUTTON_DOWN;
-		}
+
 
 		break;
 

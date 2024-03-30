@@ -12,7 +12,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "stdbool.h"
 #include "API_Delay.h"
 
 
