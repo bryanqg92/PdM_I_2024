@@ -12,6 +12,7 @@
 #include "API_uart.h"
 
 #include <stdio.h>
+#include <string.h>
 
 static UART_HandleTypeDef UartHandle;
 

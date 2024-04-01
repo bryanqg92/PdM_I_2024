@@ -29,6 +29,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <time.h>
 
 /** @addtogroup STM32F4xx_HAL_Examples
@@ -43,7 +44,18 @@
 /* Private define ------------------------------------------------------------*/
 
 /* Private macro -------------------------------------------------------------*/
+
+#define DelayDebounce 40
+#define BLINKY_DELAY_MIN 100
+#define BLINKY_DELAY_MAX 500
+
 /* Private variables ---------------------------------------------------------*/
+
+
+static bool_t previousButtonState = false; // Estado previo del botón
+
+delay_t delay_led1, delay_led2;
+int calcDelayLed1 = BLINKY_DELAY_MIN, calcDelayLed2 = BLINKY_DELAY_MIN;
 /* UART handler declaration */
 UART_HandleTypeDef UartHandle;
 
@@ -52,38 +64,11 @@ UART_HandleTypeDef UartHandle;
 static void SystemClock_Config(void);
 static void Error_Handler(void);
 
-/* Private functions ---------------------------------------------------------*/
+static int timeIntervalCalc();
+static void blinkLeds(void);
+static void timeChange(bool_t buttonState);
 
 
-
-#define DelayDebounce 10
-#define BLINKY_DELAY_MIN 100
-#define BLINKY_DELAY_MAX 500
-
-delay_t delay_led1, delay_led2;
-int calcDelayLed1 = BLINKY_DELAY_MIN, calcDelayLed2 = BLINKY_DELAY_MIN;
-
-
-
-/*
- * @brief Calculate a randomly value between two delay time
- * @return Calculate value
- */
-int timeIntervalCalc(){
-	int InternalCal = (rand() % (BLINKY_DELAY_MAX - BLINKY_DELAY_MIN + 1)) + BLINKY_DELAY_MIN;
-	return InternalCal;
-}
-
-void blinkLeds(){
-
-	if (delayRead(&delay_led1)) {
-		BSP_LED_Toggle(LED1);
-	}
-	if (delayRead(&delay_led2)) {
-		BSP_LED_Toggle(LED2);
-	}
-
-}
 
 int main(void)
 {
@@ -109,24 +94,73 @@ int main(void)
 
 	srand(time(NULL));  // Seed to initialize random function, without it function timeIntervalCalc() will be return the same value.
 
+	uint8_t ascend_msg[] = "Flanco ascendente detectado\n";
+	uint8_t desc_msg[] = "Flanco descendente detectado\n";
+
 	while (1) {
 
 		debounceFSM_update();
 
-		if(readKey()){
+		bool_t currentButtonState = readKey();
 
-			calcDelayLed1 = timeIntervalCalc(); // new led1 delay
-			calcDelayLed2 = timeIntervalCalc(); // new led2 delay
+		timeChange(currentButtonState);
 
-			delayWrite(&delay_led1, calcDelayLed1);
-			delayWrite(&delay_led2, calcDelayLed2);
 
+		if (currentButtonState != previousButtonState)
+		{
+			if (currentButtonState == true)
+			{
+				uartSendString(ascend_msg);
+			}
+			else
+			{
+				uartSendString(desc_msg);
+
+			}
+			previousButtonState = currentButtonState;
 		}
+
 
 		blinkLeds();
 	}
 
 }
+
+
+/*
+ * @brief Calculate a randomly value between two delay time
+ * @return Calculate value
+ */
+static int timeIntervalCalc(){
+	int InternalCal = (rand() % (BLINKY_DELAY_MAX - BLINKY_DELAY_MIN + 1)) + BLINKY_DELAY_MIN;
+	return InternalCal;
+}
+
+static void blinkLeds(void){
+
+	if (delayRead(&delay_led1)) {
+		BSP_LED_Toggle(LED1);
+	}
+	if (delayRead(&delay_led2)) {
+		BSP_LED_Toggle(LED2);
+	}
+
+}
+
+static void timeChange(bool_t buttonState){
+
+	if(buttonState){
+
+		calcDelayLed1 = timeIntervalCalc(); // new led1 delay
+		calcDelayLed2 = timeIntervalCalc(); // new led2 delay
+
+		delayWrite(&delay_led1, calcDelayLed1);
+		delayWrite(&delay_led2, calcDelayLed2);
+
+	}
+}
+
+
 
 
 /**
