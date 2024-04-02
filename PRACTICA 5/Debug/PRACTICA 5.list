@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_rnglists 0000066d  00000000  00000000  0002bf38  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_macro  00026bed  00000000  00000000  0002c5a5  2**0
+ 18 .debug_macro  00026be7  00000000  00000000  0002c5a5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   0000d567  00000000  00000000  00053192  2**0
+ 19 .debug_line   0000d569  00000000  00000000  0005318c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000e3746  00000000  00000000  000606f9  2**0
+ 20 .debug_str    000e3746  00000000  00000000  000606f5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  00002a88  00000000  00000000  00143e40  2**2
+ 21 .debug_frame  00002a88  00000000  00000000  00143e3c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 0000005b  00000000  00000000  001468c8  2**0
+ 22 .debug_line_str 0000005b  00000000  00000000  001468c4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -918,15 +918,15 @@ void buttonReleased() {
 
 08000820 <uartInit>:
 
-static void Error_Handler(void);
-
-
-
+/**
+  * @brief  Inicializa la UART.
+  * @retval true si la inicialización es exitosa, false si ocurre un error.
+  */
 bool_t uartInit() {
  8000820:	b580      	push	{r7, lr}
  8000822:	af00      	add	r7, sp, #0
 
-
+	/* Configuración de la estructura de la UART */
 	UartHandle.Instance = USARTx;
  8000824:	4b13      	ldr	r3, [pc, #76]	; (8000874 <uartInit+0x54>)
  8000826:	4a14      	ldr	r2, [pc, #80]	; (8000878 <uartInit+0x58>)
@@ -960,6 +960,7 @@ bool_t uartInit() {
  8000852:	2200      	movs	r2, #0
  8000854:	61da      	str	r2, [r3, #28]
 
+
 	if (HAL_UART_Init(&UartHandle) != HAL_OK) {
  8000856:	4807      	ldr	r0, [pc, #28]	; (8000874 <uartInit+0x54>)
  8000858:	f001 fb2c 	bl	8001eb4 <HAL_UART_Init>
@@ -974,10 +975,10 @@ bool_t uartInit() {
 	printf("\n\r UART configured as follows:"
  8000866:	4805      	ldr	r0, [pc, #20]	; (800087c <uartInit+0x5c>)
  8000868:	f002 f97a 	bl	8002b60 <iprintf>
+			"\n\r\t Init.Mode     =   MODE_TX_RX"
 			"\n\r\t HwFlowCtl      =   NONE"
 			"\n\r\t OverSampling  =   16 \n\r"
 	);
-
 
 	return true;
  800086c:	2301      	movs	r3, #1
@@ -990,8 +991,11 @@ bool_t uartInit() {
  800087c:	080039d4 	.word	0x080039d4
 
 08000880 <uartSendString>:
-
-
+/**
+  * @brief  Envía una cadena a través de la UART.
+  * @param  pstring: Puntero a la cadena a enviar.
+  * @retval None
+  */
 void uartSendString(uint8_t *pstring) {
  8000880:	b580      	push	{r7, lr}
  8000882:	b084      	sub	sp, #16
@@ -1016,18 +1020,17 @@ void uartSendString(uint8_t *pstring) {
  80008a8:	200000ac 	.word	0x200000ac
 
 080008ac <__io_putchar>:
-
-void uartReceiveStringSize(uint8_t *pstring, uint16_t size) {
-	HAL_UART_Receive(&UartHandle, pstring, size, UART_TIMEOUT_MS);
-}
-
+  * @brief  Implementación de fputc para redirigir la salida de printf a la UART.
+  * @param  ch: Carácter a imprimir.
+  * @param  stream: Puntero al flujo de salida (no utilizado).
+  * @retval Carácter impreso.
+  */
 PUTCHAR_PROTOTYPE {
  80008ac:	b580      	push	{r7, lr}
  80008ae:	b082      	sub	sp, #8
  80008b0:	af00      	add	r7, sp, #0
  80008b2:	6078      	str	r0, [r7, #4]
-	/* Place your implementation of fputc here */
-	/* e.g. write a character to the USART3 and Loop until the end of transmission */
+	/* Transmitir el carácter a través de la UART */
 	HAL_UART_Transmit(&UartHandle, (uint8_t*) &ch, 1, UART_TIMEOUT_MS);
  80008b4:	1d39      	adds	r1, r7, #4
  80008b6:	f44f 63fa 	mov.w	r3, #2000	; 0x7d0
@@ -1045,14 +1048,16 @@ PUTCHAR_PROTOTYPE {
  80008cc:	200000ac 	.word	0x200000ac
 
 080008d0 <Error_Handler>:
-
-
-
+/**
+  * @brief  Manejador de errores.
+  * @note   Esta función se llama en caso de error y entra en un bucle infinito.
+  * @retval None
+  */
 static void Error_Handler(void){
  80008d0:	b580      	push	{r7, lr}
  80008d2:	af00      	add	r7, sp, #0
 	while(1){
-		BSP_LED_On(LED2);
+		BSP_LED_On(LED2); /**< Enciende el LED2 en caso de error */
  80008d4:	2001      	movs	r0, #1
  80008d6:	f000 f851 	bl	800097c <BSP_LED_On>
  80008da:	e7fb      	b.n	80008d4 <Error_Handler+0x4>

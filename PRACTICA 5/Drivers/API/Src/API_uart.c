@@ -22,16 +22,14 @@
 #include <stdio.h>
 #include <string.h>
 
-
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_uart.h"
 #include "stm32f4xx_nucleo_144.h"
-
-
 #include "API_uart.h"
 
 
-#define UART_TIMEOUT_MS 1000
+
+static UART_HandleTypeDef UartHandle;
 
 
 static void Error_Handler(void);

@@ -391,6 +391,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Drivers/API/Src/API_uart.o
  .group         0x0000000000000000        0xc ./Drivers/API/Src/API_uart.o
  .group         0x0000000000000000        0xc ./Drivers/API/Src/API_uart.o
+ .group         0x0000000000000000        0xc ./Drivers/API/Src/API_uart.o
  .text          0x0000000000000000        0x0 ./Drivers/API/Src/API_uart.o
  .data          0x0000000000000000        0x0 ./Drivers/API/Src/API_uart.o
  .bss           0x0000000000000000        0x0 ./Drivers/API/Src/API_uart.o
@@ -399,12 +400,30 @@ Discarded input sections
  .text.uartReceiveStringSize
                 0x0000000000000000       0x28 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0xac0 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x22 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x2a ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x43 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x34 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x97 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000      0x369 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0xfd ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x10 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x43 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x34 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x10 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x58 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x8e ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x1c ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000      0x177 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000      0x147 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x35 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0x2b8 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000       0x28 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000       0x28 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x22 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x8e ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x51 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0x103 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000       0x6a ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0x1df ./Drivers/API/Src/API_uart.o
@@ -416,8 +435,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000    0x17f91 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000       0x6d ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000     0x36dd ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000      0x174 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x5c ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000000000       0x56 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0xca5 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0x9fe ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0x116 ./Drivers/API/Src/API_uart.o
@@ -445,25 +463,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x295 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000      0x134 ./Drivers/API/Src/API_uart.o
  .debug_macro   0x0000000000000000       0x22 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x61 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x2a ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x43 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x34 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x35 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000      0x369 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x10 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x43 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x34 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x10 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x58 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x8e ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x1c ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000      0x177 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000       0x16 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000000000      0x147 ./Drivers/API/Src/API_uart.o
  .group         0x0000000000000000        0xc ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
  .group         0x0000000000000000        0xc ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
  .group         0x0000000000000000        0xc ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
@@ -739,10 +738,13 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000      0xac0 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0x22 ./Drivers/Core/Src/stm32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x5b ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0x2a ./Drivers/Core/Src/stm32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x94 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0x43 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0x34 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0x16 ./Drivers/Core/Src/stm32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x57 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0x97 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000      0x369 ./Drivers/Core/Src/stm32f4xx_it.o
  .debug_macro   0x0000000000000000       0xfd ./Drivers/Core/Src/stm32f4xx_it.o
@@ -11725,7 +11727,7 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .debug_rnglists
                 0x0000000000000654       0x19 ./Startup/startup_stm32f429xx.o
 
-.debug_macro    0x0000000000000000    0x26bed
+.debug_macro    0x0000000000000000    0x26be7
  .debug_macro   0x0000000000000000      0x330 ./Drivers/API/Src/API_Delay.o
  .debug_macro   0x0000000000000330      0xac0 ./Drivers/API/Src/API_Delay.o
  .debug_macro   0x0000000000000df0      0x2b8 ./Drivers/API/Src/API_Delay.o
@@ -11798,76 +11800,76 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .debug_macro   0x000000000002344a       0x97 ./Drivers/API/Src/API_debounce.o
  .debug_macro   0x00000000000234e1       0xfd ./Drivers/API/Src/API_debounce.o
  .debug_macro   0x00000000000235de       0x56 ./Drivers/API/Src/API_debounce.o
- .debug_macro   0x0000000000023634      0x35f ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000023993      0x146 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000023ad9       0x58 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000023b31       0x16 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000023b47       0x20 ./Drivers/API/Src/API_uart.o
- .debug_macro   0x0000000000023b67      0x26f ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
- .debug_macro   0x0000000000023dd6      0x23c ./Drivers/CMSIS/system_stm32f4xx.o
- .debug_macro   0x0000000000024012      0x325 ./Drivers/Core/Src/stm32f4xx_it.o
- .debug_macro   0x0000000000024337       0x5b ./Drivers/Core/Src/stm32f4xx_it.o
- .debug_macro   0x0000000000024392       0x94 ./Drivers/Core/Src/stm32f4xx_it.o
- .debug_macro   0x0000000000024426       0x57 ./Drivers/Core/Src/stm32f4xx_it.o
- .debug_macro   0x000000000002447d      0x274 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x00000000000246f1       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024701       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024711       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024721       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024731       0x1c ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x000000000002474d       0x52 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x000000000002479f       0x22 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x00000000000247c1       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x00000000000247d1       0x52 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024823       0xcf ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x00000000000248f2       0x1c ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x000000000002490e       0x3d ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x000000000002494b       0x35 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024980      0x12c ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024aac       0x16 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024ac2       0x16 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024ad8       0x29 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024b01       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024b11      0x242 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024d53       0x1c ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024d6f       0x10 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024d7f      0x18a ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024f09       0x16 ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024f1f       0xce ./Drivers/Core/Src/syscalls.o
- .debug_macro   0x0000000000024fed       0xff ./Drivers/Core/Src/sysmem.o
- .debug_macro   0x00000000000250ec      0x23c ./Drivers/Core/Src/sysmem.o
- .debug_macro   0x0000000000025328      0x296 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_macro   0x00000000000255be      0x236 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_macro   0x00000000000257f4      0x23c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_macro   0x0000000000025a30      0x333 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp.o
- .debug_macro   0x0000000000025d63      0x236 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.o
- .debug_macro   0x0000000000025f99      0x24e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o
- .debug_macro   0x00000000000261e7      0x25a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_macro   0x0000000000026441      0x237 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_macro   0x0000000000026678      0x440 ./Src/main.o
- .debug_macro   0x0000000000026ab8       0x5e ./Src/main.o
- .debug_macro   0x0000000000026b16       0x16 ./Src/main.o
- .debug_macro   0x0000000000026b2c       0xc1 ./Src/main.o
+ .debug_macro   0x0000000000023634      0x359 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x000000000002398d       0x5b ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x00000000000239e8       0x94 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000023a7c       0x57 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000023ad3       0x16 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000023ae9       0x20 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000023b09      0x146 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000023c4f       0x58 ./Drivers/API/Src/API_uart.o
+ .debug_macro   0x0000000000023ca7      0x26f ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
+ .debug_macro   0x0000000000023f16      0x23c ./Drivers/CMSIS/system_stm32f4xx.o
+ .debug_macro   0x0000000000024152      0x325 ./Drivers/Core/Src/stm32f4xx_it.o
+ .debug_macro   0x0000000000024477      0x274 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x00000000000246eb       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x00000000000246fb       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x000000000002470b       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x000000000002471b       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x000000000002472b       0x1c ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024747       0x52 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024799       0x22 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x00000000000247bb       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x00000000000247cb       0x52 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x000000000002481d       0xcf ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x00000000000248ec       0x1c ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024908       0x3d ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024945       0x35 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x000000000002497a      0x12c ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024aa6       0x16 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024abc       0x16 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024ad2       0x29 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024afb       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024b0b      0x242 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024d4d       0x1c ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024d69       0x10 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024d79      0x18a ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024f03       0x16 ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024f19       0xce ./Drivers/Core/Src/syscalls.o
+ .debug_macro   0x0000000000024fe7       0xff ./Drivers/Core/Src/sysmem.o
+ .debug_macro   0x00000000000250e6      0x23c ./Drivers/Core/Src/sysmem.o
+ .debug_macro   0x0000000000025322      0x296 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_macro   0x00000000000255b8      0x236 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_macro   0x00000000000257ee      0x23c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_macro   0x0000000000025a2a      0x333 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp.o
+ .debug_macro   0x0000000000025d5d      0x236 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.o
+ .debug_macro   0x0000000000025f93      0x24e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o
+ .debug_macro   0x00000000000261e1      0x25a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_macro   0x000000000002643b      0x237 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_macro   0x0000000000026672      0x440 ./Src/main.o
+ .debug_macro   0x0000000000026ab2       0x5e ./Src/main.o
+ .debug_macro   0x0000000000026b10       0x16 ./Src/main.o
+ .debug_macro   0x0000000000026b26       0xc1 ./Src/main.o
 
-.debug_line     0x0000000000000000     0xd567
+.debug_line     0x0000000000000000     0xd569
  .debug_line    0x0000000000000000      0xacc ./Drivers/API/Src/API_Delay.o
  .debug_line    0x0000000000000acc      0xb64 ./Drivers/API/Src/API_debounce.o
- .debug_line    0x0000000000001630      0xb10 ./Drivers/API/Src/API_uart.o
- .debug_line    0x0000000000002140      0x99a ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
- .debug_line    0x0000000000002ada      0x8d4 ./Drivers/CMSIS/system_stm32f4xx.o
- .debug_line    0x00000000000033ae      0xaee ./Drivers/Core/Src/stm32f4xx_it.o
- .debug_line    0x0000000000003e9c      0x80d ./Drivers/Core/Src/syscalls.o
- .debug_line    0x00000000000046a9      0x4de ./Drivers/Core/Src/sysmem.o
- .debug_line    0x0000000000004b87      0xb4b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x00000000000056d2      0xdc5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x0000000000006497      0xcb4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x000000000000714b      0xa8c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp.o
- .debug_line    0x0000000000007bd7      0x877 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.o
- .debug_line    0x000000000000844e      0xa3f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o
- .debug_line    0x0000000000008e8d      0xe8f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x0000000000009d1c     0x2b9a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_line    0x000000000000c8b6      0xc3a ./Src/main.o
- .debug_line    0x000000000000d4f0       0x77 ./Startup/startup_stm32f429xx.o
+ .debug_line    0x0000000000001630      0xb12 ./Drivers/API/Src/API_uart.o
+ .debug_line    0x0000000000002142      0x99a ./Drivers/BSP/STM32F4xx_Nucleo_144/stm32f4xx_nucleo_144.o
+ .debug_line    0x0000000000002adc      0x8d4 ./Drivers/CMSIS/system_stm32f4xx.o
+ .debug_line    0x00000000000033b0      0xaee ./Drivers/Core/Src/stm32f4xx_it.o
+ .debug_line    0x0000000000003e9e      0x80d ./Drivers/Core/Src/syscalls.o
+ .debug_line    0x00000000000046ab      0x4de ./Drivers/Core/Src/sysmem.o
+ .debug_line    0x0000000000004b89      0xb4b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x00000000000056d4      0xdc5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x0000000000006499      0xcb4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x000000000000714d      0xa8c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x0000000000007bd9      0x877 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.o
+ .debug_line    0x0000000000008450      0xa3f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o
+ .debug_line    0x0000000000008e8f      0xe8f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000000000009d1e     0x2b9a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_line    0x000000000000c8b8      0xc3a ./Src/main.o
+ .debug_line    0x000000000000d4f2       0x77 ./Startup/startup_stm32f429xx.o
 
 .debug_str      0x0000000000000000    0xe3746
  .debug_str     0x0000000000000000    0xde9fe ./Drivers/API/Src/API_Delay.o
