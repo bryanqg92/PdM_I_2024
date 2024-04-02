@@ -71,7 +71,6 @@ void debounceFSM_update() {
 
 	buttonState = BSP_PB_GetState(BUTTON_USER);
 
-
 	switch(fsmState) {
 
 	case BUTTON_UP:

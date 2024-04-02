@@ -689,7 +689,6 @@ void debounceFSM_update() {
  80006f2:	4b37      	ldr	r3, [pc, #220]	; (80007d0 <debounceFSM_update+0xf4>)
  80006f4:	701a      	strb	r2, [r3, #0]
 
-
 	switch(fsmState) {
  80006f6:	4b37      	ldr	r3, [pc, #220]	; (80007d4 <debounceFSM_update+0xf8>)
  80006f8:	781b      	ldrb	r3, [r3, #0]
@@ -5950,43 +5949,43 @@ int main(void)
  80026c2:	4603      	mov	r3, r0
  80026c4:	f887 303f 	strb.w	r3, [r7, #63]	; 0x3f
 
-		timeChange(currentButtonState);
- 80026c8:	f897 303f 	ldrb.w	r3, [r7, #63]	; 0x3f
- 80026cc:	4618      	mov	r0, r3
- 80026ce:	f000 f85d 	bl	800278c <timeChange>
-
 
 		if (currentButtonState != previousButtonState)
- 80026d2:	4b13      	ldr	r3, [pc, #76]	; (8002720 <main+0xe8>)
- 80026d4:	781b      	ldrb	r3, [r3, #0]
- 80026d6:	f897 203f 	ldrb.w	r2, [r7, #63]	; 0x3f
- 80026da:	429a      	cmp	r2, r3
- 80026dc:	d011      	beq.n	8002702 <main+0xca>
+ 80026c8:	4b15      	ldr	r3, [pc, #84]	; (8002720 <main+0xe8>)
+ 80026ca:	781b      	ldrb	r3, [r3, #0]
+ 80026cc:	f897 203f 	ldrb.w	r2, [r7, #63]	; 0x3f
+ 80026d0:	429a      	cmp	r2, r3
+ 80026d2:	d016      	beq.n	8002702 <main+0xca>
 		{
-			if (currentButtonState == true)
- 80026de:	f897 303f 	ldrb.w	r3, [r7, #63]	; 0x3f
- 80026e2:	2b00      	cmp	r3, #0
- 80026e4:	d005      	beq.n	80026f2 <main+0xba>
+			if (currentButtonState)
+ 80026d4:	f897 303f 	ldrb.w	r3, [r7, #63]	; 0x3f
+ 80026d8:	2b00      	cmp	r3, #0
+ 80026da:	d005      	beq.n	80026e8 <main+0xb0>
 			{
 				uartSendString(ascend_msg);
- 80026e6:	f107 0320 	add.w	r3, r7, #32
- 80026ea:	4618      	mov	r0, r3
- 80026ec:	f7fe f8c8 	bl	8000880 <uartSendString>
- 80026f0:	e003      	b.n	80026fa <main+0xc2>
+ 80026dc:	f107 0320 	add.w	r3, r7, #32
+ 80026e0:	4618      	mov	r0, r3
+ 80026e2:	f7fe f8cd 	bl	8000880 <uartSendString>
+ 80026e6:	e003      	b.n	80026f0 <main+0xb8>
 			}
 			else
 			{
 				uartSendString(desc_msg);
- 80026f2:	463b      	mov	r3, r7
- 80026f4:	4618      	mov	r0, r3
- 80026f6:	f7fe f8c3 	bl	8000880 <uartSendString>
+ 80026e8:	463b      	mov	r3, r7
+ 80026ea:	4618      	mov	r0, r3
+ 80026ec:	f7fe f8c8 	bl	8000880 <uartSendString>
 
 			}
+			timeChange(currentButtonState);
+ 80026f0:	f897 303f 	ldrb.w	r3, [r7, #63]	; 0x3f
+ 80026f4:	4618      	mov	r0, r3
+ 80026f6:	f000 f849 	bl	800278c <timeChange>
 			previousButtonState = currentButtonState;
  80026fa:	4a09      	ldr	r2, [pc, #36]	; (8002720 <main+0xe8>)
  80026fc:	f897 303f 	ldrb.w	r3, [r7, #63]	; 0x3f
  8002700:	7013      	strb	r3, [r2, #0]
 		}
+
 
 
 		blinkLeds();

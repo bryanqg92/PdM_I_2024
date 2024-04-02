@@ -1,6 +1,9 @@
 /*
  * API_uart.h
  *
+ * This header file defines the API for the UART (Universal Asynchronous Receiver Transmitter) peripheral.
+ * only for UART3 stlink comm
+ *
  *  Created on: Mar 30, 2024
  *      Author: lean
  */

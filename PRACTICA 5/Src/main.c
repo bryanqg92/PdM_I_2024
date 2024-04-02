@@ -103,12 +103,10 @@ int main(void)
 
 		bool_t currentButtonState = readKey();
 
-		timeChange(currentButtonState);
-
 
 		if (currentButtonState != previousButtonState)
 		{
-			if (currentButtonState == true)
+			if (currentButtonState)
 			{
 				uartSendString(ascend_msg);
 			}
@@ -117,8 +115,10 @@ int main(void)
 				uartSendString(desc_msg);
 
 			}
+			timeChange(currentButtonState);
 			previousButtonState = currentButtonState;
 		}
+
 
 
 		blinkLeds();
