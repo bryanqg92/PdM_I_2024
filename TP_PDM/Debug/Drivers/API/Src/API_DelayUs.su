@@ -1,0 +1,10 @@
+../Drivers/API/Src/API_DelayUs.c:23:8:Timer_Init	32	static
+../Drivers/API/Src/API_DelayUs.c:57:6:HAL_TIM_Base_MspInit	24	static
+../Drivers/API/Src/API_DelayUs.c:67:10:getUsTick	4	static
+../Drivers/API/Src/API_DelayUs.c:77:6:TimerStart	4	static
+../Drivers/API/Src/API_DelayUs.c:98:6:usDelay	24	static,ignoring_inline_asm
+../Drivers/API/Src/API_DelayUs.c:115:6:usDelayInit	16	static
+../Drivers/API/Src/API_DelayUs.c:126:8:usDelayRead	24	static
+../Drivers/API/Src/API_DelayUs.c:155:6:usDelayWrite	16	static
+../Drivers/API/Src/API_DelayUs.c:165:6:usResetDelay	16	static
+../Drivers/API/Src/API_DelayUs.c:171:13:Error_Handler	8	static

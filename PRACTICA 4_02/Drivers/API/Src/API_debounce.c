@@ -88,7 +88,6 @@ void debounceFSM_update() {
 		if (delayRead(&debounceInit)) {
 			if (buttonState == GPIO_PIN_SET){
 				fsmState = BUTTON_DOWN;
-				isKeyPressed = true;
 				buttonPressed();
 			}
 			else {
@@ -112,7 +111,7 @@ void debounceFSM_update() {
 
 			if (buttonState == GPIO_PIN_RESET){
 				fsmState = BUTTON_UP;
-				isKeyPressed = false;
+				isKeyPressed = true;
 				buttonReleased();
 			}
 			else {

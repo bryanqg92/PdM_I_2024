@@ -1,0 +1,14 @@
+../Drivers/API/Src/API_LCD_I2C.c:19:13:Error_Handler	1
+../Drivers/API/Src/API_LCD_I2C.c:28:8:I2C_Init	2
+../Drivers/API/Src/API_LCD_I2C.c:48:6:Lcd_Send_Cmd	1
+../Drivers/API/Src/API_LCD_I2C.c:61:6:Lcd_Send_Char	1
+../Drivers/API/Src/API_LCD_I2C.c:74:8:Lcd_Init	1
+../Drivers/API/Src/API_LCD_I2C.c:98:6:Lcd_Clear	1
+../Drivers/API/Src/API_LCD_I2C.c:104:6:Lcd_Set_Cursor	5
+../Drivers/API/Src/API_LCD_I2C.c:124:6:Lcd_Send_String	2
+../Drivers/API/Src/API_LCD_I2C.c:129:6:Lcd_Shift_Right	1
+../Drivers/API/Src/API_LCD_I2C.c:133:6:Lcd_Shift_Left	1
+../Drivers/API/Src/API_LCD_I2C.c:137:6:Lcd_Blink	1
+../Drivers/API/Src/API_LCD_I2C.c:141:6:Lcd_NoBlink	1
+../Drivers/API/Src/API_LCD_I2C.c:145:6:Lcd_CGRAM_CreateChar	3
+../Drivers/API/Src/API_LCD_I2C.c:157:6:Lcd_CGRAM_WriteChar	1

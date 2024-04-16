@@ -1,0 +1,4 @@
+../Src/main.c:73:5:main	8
+../Src/main.c:140:13:appSystemInit	7
+../Src/main.c:224:13:SystemClock_Config	4
+../Src/main.c:276:13:Error_Handler	1

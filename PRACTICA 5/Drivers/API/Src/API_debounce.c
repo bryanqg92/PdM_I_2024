@@ -71,6 +71,7 @@ void debounceFSM_update() {
 
 	buttonState = BSP_PB_GetState(BUTTON_USER);
 
+
 	switch(fsmState) {
 
 	case BUTTON_UP:
@@ -87,12 +88,10 @@ void debounceFSM_update() {
 		if (delayRead(&debounceInit)) {
 			if (buttonState == GPIO_PIN_SET){
 				fsmState = BUTTON_DOWN;
-				isKeyPressed = true;
 				buttonPressed();
 			}
 			else {
 				fsmState = BUTTON_UP;
-				isKeyPressed = false;
 			}
 		}
 
@@ -103,10 +102,6 @@ void debounceFSM_update() {
 		if (buttonState == GPIO_PIN_RESET){
 			delayRead(&debounceInit);
 			fsmState = BUTTON_RAISING;
-
-		}
-		else{
-			isKeyPressed = true;
 		}
 		break;
 
@@ -116,12 +111,11 @@ void debounceFSM_update() {
 
 			if (buttonState == GPIO_PIN_RESET){
 				fsmState = BUTTON_UP;
-				isKeyPressed = false;
+				isKeyPressed = true;
 				buttonReleased();
 			}
 			else {
 				fsmState = BUTTON_DOWN;
-				isKeyPressed = true;
 			}
 		}
 

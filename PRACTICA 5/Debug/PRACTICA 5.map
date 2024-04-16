@@ -11610,7 +11610,7 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .comment       0x0000000000000043       0x44 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
  .comment       0x0000000000000043       0x44 ./Src/main.o
 
-.debug_info     0x0000000000000000     0x97ae
+.debug_info     0x0000000000000000     0x97c1
  .debug_info    0x0000000000000000      0x214 ./Drivers/API/Src/API_Delay.o
  .debug_info    0x0000000000000214      0x2da ./Drivers/API/Src/API_debounce.o
  .debug_info    0x00000000000004ee      0x778 ./Drivers/API/Src/API_uart.o
@@ -11627,8 +11627,8 @@ LOAD /home/lean/st/stm32cubeide_1.14.0/plugins/com.st.stm32cube.ide.mcu.external
  .debug_info    0x0000000000004bee      0x6be ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o
  .debug_info    0x00000000000052ac      0x8c9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_info    0x0000000000005b75     0x2f9a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_info    0x0000000000008b0f      0xc7c ./Src/main.o
- .debug_info    0x000000000000978b       0x23 ./Startup/startup_stm32f429xx.o
+ .debug_info    0x0000000000008b0f      0xc8f ./Src/main.o
+ .debug_info    0x000000000000979e       0x23 ./Startup/startup_stm32f429xx.o
 
 .debug_abbrev   0x0000000000000000     0x1df7
  .debug_abbrev  0x0000000000000000      0x131 ./Drivers/API/Src/API_Delay.o

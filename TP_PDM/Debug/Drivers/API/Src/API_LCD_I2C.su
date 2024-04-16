@@ -1,0 +1,14 @@
+../Drivers/API/Src/API_LCD_I2C.c:19:13:Error_Handler	8	static
+../Drivers/API/Src/API_LCD_I2C.c:28:8:I2C_Init	8	static
+../Drivers/API/Src/API_LCD_I2C.c:48:6:Lcd_Send_Cmd	32	static
+../Drivers/API/Src/API_LCD_I2C.c:61:6:Lcd_Send_Char	32	static
+../Drivers/API/Src/API_LCD_I2C.c:74:8:Lcd_Init	8	static
+../Drivers/API/Src/API_LCD_I2C.c:98:6:Lcd_Clear	8	static
+../Drivers/API/Src/API_LCD_I2C.c:104:6:Lcd_Set_Cursor	24	static
+../Drivers/API/Src/API_LCD_I2C.c:124:6:Lcd_Send_String	16	static
+../Drivers/API/Src/API_LCD_I2C.c:129:6:Lcd_Shift_Right	8	static
+../Drivers/API/Src/API_LCD_I2C.c:133:6:Lcd_Shift_Left	8	static
+../Drivers/API/Src/API_LCD_I2C.c:137:6:Lcd_Blink	8	static
+../Drivers/API/Src/API_LCD_I2C.c:141:6:Lcd_NoBlink	8	static
+../Drivers/API/Src/API_LCD_I2C.c:145:6:Lcd_CGRAM_CreateChar	24	static
+../Drivers/API/Src/API_LCD_I2C.c:157:6:Lcd_CGRAM_WriteChar	16	static

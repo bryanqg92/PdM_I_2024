@@ -1,4 +1,4 @@
-
+///home/lean/Downloads/st-stm32cubeclt_1.15.0_20695_20240315_1429_amd64.deb_bundle.sh
 
 /**
  ******************************************************************************
@@ -94,8 +94,8 @@ int main(void)
 
 	srand(time(NULL));  // Seed to initialize random function, without it function timeIntervalCalc() will be return the same value.
 
-	uint8_t ascend_msg[] = "Flanco ascendente detectado\n";
-	uint8_t desc_msg[] = "Flanco descendente detectado\n";
+	const uint8_t ascend_msg[] = "Flanco ascendente detectado\n"; //TODO fix function params
+	const uint8_t desc_msg[] = "Flanco descendente detectado\n";
 
 	while (1) {
 
@@ -108,11 +108,11 @@ int main(void)
 		{
 			if (currentButtonState)
 			{
-				uartSendString(ascend_msg);
+				uartSendString((uint8_t *)ascend_msg);
 			}
 			else
 			{
-				uartSendString(desc_msg);
+				uartSendString((uint8_t *)desc_msg);
 
 			}
 			timeChange(currentButtonState);
