@@ -38,6 +38,7 @@
 #include "tankLevel.h"
 #include "valveControl.h"
 #include "LCD_Manager.h"
+#include "UART_Manager.h"
 
 
 //LCD MESSAGES OK AND ERROR
@@ -84,14 +85,12 @@ int main(void)
 	BSP_LED_Init(LED3);
 	//BSP_PB_Init(BUTTON_USER,BUTTON_MODE_GPIO);
 
-
-
-
 	while (1) {
 
 		switch (appState){
 
 		case INIT:
+
 			appSystemInit();
 			appState = TANK_LEVEL;
 			break;
@@ -103,9 +102,11 @@ int main(void)
 			break;
 
 		case VALVE_CONTROL:
+
 			valveController(levelResult);
 			appState = DATA_DISPLAY;
 			break;
+
 		case DATA_DISPLAY:
 
 			if (levelResult != LEVEL_ERROR){
@@ -123,8 +124,10 @@ int main(void)
 			}
 			appState = UART_DISPLAY;
 			break;
+
 		case UART_DISPLAY:
 
+			UARTshowParams();
 			appState = TANK_LEVEL;
 
 			break;

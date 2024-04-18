@@ -32,7 +32,7 @@ static usDelay_t echoTimeout;
 
 static uint32_t pulse_width;
 static int32_t waterLevel; 
-static bool_t readlevelError; 
+static bool_t readlevelError;
 
 uint8_t levelResult; /**< EXTERN Resultado del nivel de agua. */
 float distance; /**< EXTERN Distancia medida por el sensor ultrasónico. */

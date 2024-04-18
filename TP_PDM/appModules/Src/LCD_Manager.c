@@ -118,6 +118,7 @@ void levelErrorShow(void){
 		Lcd_Send_String(" ");
 	}
 
+
 }
 
 /**
@@ -163,5 +164,8 @@ void valvesErrorShow(void){
 	else{
 		Lcd_Send_String(" ");
 	}
+
+	Lcd_Set_Cursor(2,1);
+	Lcd_Send_String("ERROR VALVULAS");
 
 }

@@ -8,11 +8,13 @@
 #ifndef INC_UART_MANAGER_H_
 #define INC_UART_MANAGER_H_
 
+#define UART_BUFFER_SIZE	50
+#define PERIOD_TX_MS		20000
+
 
 #include "API_uart.h"
 
-
-void UART_initMessages(uint8_t);
+void UARTshowParams();
 
 
 

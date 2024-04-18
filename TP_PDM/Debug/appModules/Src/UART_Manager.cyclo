@@ -1,0 +1,4 @@
+../appModules/Src/UART_Manager.c:31:6:UARTshowParams	3
+../appModules/Src/UART_Manager.c:43:13:UARTlevelShow	2
+../appModules/Src/UART_Manager.c:58:13:UARTvalveShow	5
+../appModules/Src/UART_Manager.c:77:13:UARTdelayInit	1
